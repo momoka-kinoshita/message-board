@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pagy, @messages = pagy(Message.order(id: :desc), items: 3)
+    @pagy, @messages = pagy(Message.order(id: :desc), items:10)
   end
 
   def show
@@ -16,10 +16,10 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      flash[:success] = 'Message が正常に投稿されました'
+      flash[:success] = 'curry が正常に投稿されました'
       redirect_to @message
     else
-      flash.now[:danger] = 'Message が投稿されませんでした'
+      flash.now[:danger] = 'curry が投稿されませんでした'
       render :new
     end
   end
@@ -29,10 +29,10 @@ class MessagesController < ApplicationController
 
   def update
     if @message.update(message_params)
-      flash[:success] = 'Message は正常に更新されました'
+      flash[:success] = 'curry は正常に更新されました'
       redirect_to @message
     else
-      flash.now[:danger] = 'Message は更新されませんでした'
+      flash.now[:danger] = 'curry は更新されませんでした'
       render :edit
     end
   end
@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
   def destroy
     @message.destroy
 
-    flash[:success] = 'Message は正常に削除されました'
+    flash[:success] = 'curry は正常に削除されました'
     redirect_to messages_url
   end
 
