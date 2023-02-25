@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-6">
+  <div>
     <%= form_with(model: message) do |f| %>
     
       <% if message.errors.any? %>
@@ -13,12 +13,32 @@
       <% end %>
 
       <div class="mb-3">
-        <%= f.label :title, 'curry shop' %>
+        <%= f.label :title, 'curry shop（必須）' %>
         <%= f.text_field :title, class: 'form-control' %>
       </div>
 
       <div class="mb-3">
-        <%= f.label :content, '詳細・コメント' %>
+        <%= f.label :place, '場所（必須）' %>
+        <%= f.text_field :place, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :day, '定休日（必須）' %>
+        <%= f.text_field :day, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :hour, '営業時間' %>
+        <%= f.text_field :hour, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :currytype, '種類' %>
+        <%= f.text_field :currytype, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :content, 'コメント' %>
         <%= f.text_field :content, class: 'form-control' %>
       </div>
 

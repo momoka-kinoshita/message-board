@@ -1,19 +1,32 @@
-<h1>id: <%= @message.id %> の curry shop 詳細ページ</h1>
+<h1><%= @message.title %></h1>
 
-<table class="table table-bordered">
-  <tr>
-    <th>id</th>
-    <td><%= @message.id %></td>
-  </tr>
+<table class="table table-bordered table-striped">
+  
   <tr>
     <th>curry shop</th>
     <td><%= @message.title %></td>
   </tr>
   <tr>
-    <th>詳細・コメント</th>
+    <th>場所</th>
+    <td><%= @message.place %></td>
+  </tr>
+  <tr>
+    <th>定休日</th>
+    <td><%= @message.day %></td>
+  </tr>
+  <tr>
+    <th>営業時間</th>
+    <td><%= @message.hour %></td>
+  </tr>
+  <tr>
+    <th>種類</th>
+    <td><%= @message.currytype %></td>
+  </tr>
+  <tr>
+    <th>コメント</th>
     <td><%= @message.content %></td>
   </tr>
 </table>
 
-<%= link_to 'このcurryを編集する', edit_message_path(@message), class: 'btn btn-light' %>
+<%= link_to 'このcurryを編集する', edit_message_path(@message), class: 'btn btn-success' %>
 <%= link_to 'このcurryを削除する', @message, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>

@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_19_102549) do
+ActiveRecord::Schema.define(version: 2023_02_25_123540) do
 
   create_table "messages", charset: "utf8mb4", force: :cascade do |t|
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
+    t.string "place"
+    t.string "day"
+    t.string "hour"
+    t.string "currytype"
   end
 
 end

@@ -1,4 +1,5 @@
 class Message < ApplicationRecord
-  validates :content, presence: true, length: { maximum: 255 }
   validates :title, presence: true, length: { maximum: 255 }
+  validates :place, presence: true, length: { maximum: 255 }
+  validates :day, presence: true, length: { maximum: 255 }
 end
