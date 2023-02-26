@@ -51,6 +51,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:content, :title, :place, :day, :hour, :currytype)
+    params.require(:message).permit(:content, :title, :place, :day, :hour, :currytype, :curryurl)
   end
 end

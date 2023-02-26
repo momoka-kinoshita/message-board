@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_25_123540) do
+ActiveRecord::Schema.define(version: 2023_02_26_013859) do
 
   create_table "messages", charset: "utf8mb4", force: :cascade do |t|
     t.string "content"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2023_02_25_123540) do
     t.string "day"
     t.string "hour"
     t.string "currytype"
+    t.string "curryurl"
   end
 
 end
